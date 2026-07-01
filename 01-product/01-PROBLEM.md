@@ -37,3 +37,9 @@ Neither organizes the creative journey of a song.
 ## Opportunity
 
 Create a dedicated workspace designed specifically around how independent musicians actually create music together.
+
+## Decisions
+
+- The primary problem is fragmented collaboration.
+- Existing tools solve storage, not creative workflow.
+- The product should focus on the entire song lifecycle rather than just file management.

@@ -24,3 +24,9 @@ Our goal is to become the workspace musicians open every time they create togeth
 ## Long-Term Vision
 
 Become the default collaboration platform for independent musicians worldwide.
+
+## Decisions
+
+- The product exists to empower independent musicians.
+- The product should remain simple and musician-first.
+- Professional collaboration tools should be accessible regardless of budget.
