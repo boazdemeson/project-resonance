@@ -2,17 +2,17 @@
 
 ## Our Promise
 
-Every song deserves one home.
+Music creation should feel creative—not chaotic.
 
-We provide independent musicians with a dedicated workspace where every revision, conversation, collaborator, and decision stays connected to the song.
+We provide musicians with a workspace where every Session, Snapshot, idea, lyric, note, and conversation lives together.
 
-No more scattered folders.
+No scattered folders.
 
-No more lost feedback.
+No lost revisions.
 
-No more wondering which version is the latest.
+No forgotten ideas.
 
-Just music.
+Just one place where music evolves naturally.
 
 ---
 

@@ -2,229 +2,165 @@
 
 ## Purpose
 
-This document defines the core concepts of the product.
+This document defines the core business entities of the platform.
 
-These concepts describe the language of the platform and should remain consistent across product discussions, UI, APIs, and database design.
+The platform exists to support the creative process of making music.
 
-This is **not** a database schema. It is a business domain model.
+The primary entity is the **Session**.
 
 ---
 
 # Domain Hierarchy
 
 Workspace
-└── Collection
-    └── Song
-        ├── Version
-        ├── Collaborator
-        ├── Comment
-        ├── Attachment
-        ├── Milestone
-        └── Activity
+
+├── Sessions
+
+│   ├── Snapshots
+
+│   ├── Timeline
+
+│   ├── Comments
+
+│   ├── Notes
+
+│   ├── Lyrics
+
+│   ├── Attachments
+
+│   └── Collaborators
+
+│
+
+└── Music Projects (Optional)
 
 ---
 
 # Workspace
 
-A Workspace represents the personal home of a musician or team.
+A Workspace is the personal creative space of a musician or team.
 
-Every user owns or belongs to one or more Workspaces.
-
-A Workspace contains multiple Collections.
-
-### Examples
-
-- Judas
-- Midnight Studio
-- My Band
+It contains every Session and optional Music Project.
 
 ---
 
-# Collection
+# Session
 
-A Collection groups related Songs.
+A Session is the primary creative entity of the platform.
 
-Collections provide organization without forcing a specific workflow.
+A Session represents the complete evolution of a musical idea.
 
-A Collection may represent:
+A Session may begin as:
 
-- Album
-- EP
-- Singles
-- Demo Ideas
-- Beat Pack
-- Client Project
-- Soundtrack
+- a melody
+- a beat
+- a riff
+- a demo
+- a recording
+- a complete song
 
-A Collection contains multiple Songs.
+The platform never assumes the outcome.
 
----
-
-# Song
-
-The Song is the central entity of the platform.
-
-Everything revolves around a Song.
-
-A Song contains:
-
-- Versions
-- Collaborators
-- Comments
-- Attachments
-- Timeline
-- Milestones
-
-Every Song progresses through a creative lifecycle.
+Everything revolves around the Session.
 
 ---
 
-# Version
+# Snapshot
 
-A Version represents the state of a Song at a specific point in time.
+A Snapshot captures the state of a Session at a specific point in time.
 
-Uploading a new audio file creates a new Version.
+Creating a Snapshot never overwrites previous work.
 
-Versions are immutable.
-
-Older Versions are never overwritten.
-
-Each Version may include:
-
-- Audio file
-- Title
-- Description
-- Uploaded by
-- Upload date
-
-Examples:
-
-Version 1
-Label: Demo
-
-Version 5
-Label: Mix 2
-
-Version 12
-Label: Final Master
-
----
-
-# Collaborator
-
-A Collaborator is someone participating in the creation of a Song.
-
-Examples include:
-
-- Artist
-- Producer
-- Mixing Engineer
-- Mastering Engineer
-- Guitarist
-- Songwriter
-
-Collaborators may have different permissions.
-
----
-
-# Comment
-
-A Comment represents feedback.
-
-Comments may belong to:
-
-- Song
-- Version
-
-Comments may optionally reference an audio timestamp.
-
-Example:
-
-01:42
-
-"The vocal sounds slightly buried here."
-
----
-
-# Attachment
-
-Attachments are supporting files related to a Song.
-
-Examples:
-
-- Lyrics
-- Chord Sheets
-- MIDI
-- Cover Art
-- Session Notes
-- Project Files
-
-Attachments are not Versions.
-
----
-
-# Milestone
-
-A Milestone marks an important achievement during a Song's lifecycle.
-
-Examples:
-
-- First Demo
-- Recording Complete
-- Mixing Complete
-- Approved
-- Released
-
-Milestones help tell the story of the Song.
-
----
-
-# Activity
-
-Activity represents every meaningful event.
-
-Examples:
-
-- Song created
-- Version uploaded
-- Comment added
-- Collaborator invited
-- Milestone reached
-
-Activities form the Song Timeline.
+Snapshots preserve creative history.
 
 ---
 
 # Timeline
 
-The Timeline is the chronological history of a Song.
+The Timeline records the evolution of a Session.
 
-Unlike traditional version history, the Timeline captures both creative progress and collaboration.
+Examples:
 
-The Timeline tells the complete story of how a Song evolved.
+- Session created
+- Snapshot uploaded
+- Comment added
+- Lyrics updated
+- Status changed
 
 ---
 
-# Song Status
+# Comments
 
-A Song always has one current Status.
+Comments represent feedback.
 
-Possible statuses include:
+Comments may optionally reference timestamps.
 
-- Idea
-- Writing
-- Recording
-- Production
-- Mixing
-- Mastering
-- Review
-- Released
-- Archived
+---
+
+# Notes
+
+Free-form notes created during the creative process.
+
+Examples:
+
+- Recording ideas
+- Mix reminders
+- TODOs
+
+---
+
+# Lyrics
+
+Lyrics belong directly to the Session.
+
+Version history should preserve lyric changes.
+
+---
+
+# Attachments
+
+Supporting files.
+
+Examples:
+
+- MIDI
+- Cover concepts
+- Chords
+- PDFs
+- DAW files
+
+---
+
+# Collaborators
+
+People invited to participate in a Session.
+
+Collaboration is optional.
+
+The platform should provide value even when working alone.
+
+---
+
+# Music Project
+
+A Music Project is an optional organizational entity.
+
+Examples:
+
+- Album
+- EP
+- Client Work
+- Beat Pack
+- Demo Collection
+
+Music Projects organize Sessions around a creative goal.
+
+Sessions remain the source of truth.
 
 ---
 
 # Guiding Principle
 
-Users should think in terms of Songs—not folders or files.
+The platform manages creative work—not files.
 
-The platform organizes creative work, not storage.
+Everything exists to support the evolution of a Session.

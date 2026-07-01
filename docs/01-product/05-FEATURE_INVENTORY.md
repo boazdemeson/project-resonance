@@ -1,250 +1,521 @@
 # Feature Inventory
 
-This document contains every feature idea for the platform.
+## Purpose
 
-Features are grouped by domain.
+This document contains every planned feature for the platform.
 
-Each feature is classified as:
+Features are grouped by business domain rather than implementation.
+
+Priority Levels:
 
 ⭐ Core
 ⭐⭐ Important
-⭐⭐⭐ Future
+⭐⭐⭐ Future Vision
 
-Core features are required for the first public release.
-
-Important features should be added after launch.
-
-Future features represent the long-term vision.
 ---
+
 # 🏠 Workspace
-## Core ⭐
-User profile
-Workspace
-Workspace settings
-Invite members
-Roles & permissions
----
-## Important ⭐⭐
-Multiple workspaces
-Team avatars
-Workspace branding
----
-## Future ⭐⭐⭐
-Workspace analytics
-Public workspace
-Workspace templates
+
+The Workspace is the personal creative space of a musician or team.
+
+## ⭐ Core
+
+- Create Workspace
+- Edit Workspace
+- Workspace Settings
+- Profile
+- Upload Avatar
+- Dark / Light Theme
+
+## ⭐⭐ Important
+
+- Multiple Workspaces
+- Team Workspace
+- Workspace Templates
+- Workspace Branding
+
+## ⭐⭐⭐ Future
+
+- Public Workspace
+- Portfolio Mode
+- Workspace Analytics
+
 ---
 
-# 📁 Music Project
+# 🎵 Session
 
-Remember, this isn't just a folder.
+The heart of the platform.
 
-It's the creative goal.
----
-## Core ⭐
-Create project
-Edit project
-Delete project
-Cover image
-Description
-Members
-Project type
-Song list
----
-## Important ⭐⭐
-Progress tracking
-Project notes
-Deadlines
-Target release date
-Milestones
-Tags
----
-## Future ⭐⭐⭐
-Budget
-Contracts
-Revenue tracking
-Distribution status
-Publishing checklist
----
+Everything revolves around Sessions.
 
-# 🎵 Song
+## ⭐ Core
 
-This is our most important domain.
----
-## Core ⭐
-Create song
-Rename
-Description
-Status
-Versions
-Timeline
-Comments
-Collaborators
----
-## Important ⭐⭐
-BPM
-Key
-Genre
-Mood
-Lyrics
-Credits
-Attachments
-Color label
-Favorite
----
-## Future ⭐⭐⭐
-AI song summary
-AI lyric generation
-AI metadata extraction
-AI mood detection
-Similar songs
+General
+
+- Create Session
+- Rename Session
+- Delete Session
+- Duplicate Session
+- Favorite Session
+- Archive Session
+
+Metadata
+
+- Description
+- Genre
+- BPM
+- Key
+- Mood
+- Tags
+- Color Label
+
+Creative
+
+- Lyrics
+- Notes
+- References
+- Inspiration Board
+
+Organization
+
+- Status
+- Last Edited
+- Created Date
+- Session History
+
+## ⭐⭐ Important
+
+- Session Thumbnail
+- Session Cover Image
+- Session Templates
+- Session Goals
+- Estimated Completion
+- Session Health
+- Session Labels
+- Pin Session
+
+## ⭐⭐⭐ Future
+
+- AI Session Summary
+- AI Mood Detection
+- AI Genre Detection
+- AI Song Naming
+- AI Organization
+- AI Suggestions
+
 ---
 
-# 🎧 Version
+# 📸 Snapshots
 
-This is where our product shines.
+Snapshots preserve creative history.
+
+## ⭐ Core
+
+- Create Snapshot
+- Upload Audio
+- Rename Snapshot
+- Snapshot Notes
+- Download Snapshot
+- Restore Snapshot
+- Snapshot History
+- Current Snapshot Indicator
+
+## ⭐⭐ Important
+
+- Waveform Preview
+- Audio Duration
+- File Size
+- Audio Metadata
+- Snapshot Labels
+- Favorite Snapshot
+- Compare Snapshots
+
+## ⭐⭐⭐ Future
+
+- AI Snapshot Comparison
+- Loudness Analysis
+- Frequency Comparison
+- Stem Comparison
+- Automatic Mix Notes
+
 ---
-## Core ⭐
-Upload
-Download
-Play audio
-Version history
-Restore version
-Version notes
-Upload date
-Uploaded by
+
+# 📝 Notes
+
+Creative thinking.
+
+## ⭐ Core
+
+- Rich Text
+- Checklist
+- Markdown
+- Auto Save
+
+## ⭐⭐ Important
+
+- Pinned Notes
+- Mention Users
+- Version History
+- Note Categories
+
+## ⭐⭐⭐ Future
+
+- AI Summarize
+- AI Rewrite
+- AI Brainstorm
+
 ---
-## Important ⭐⭐
-Waveform preview
-Compare versions
-Audio metadata
-Version labels
-Pin version
-## Future ⭐⭐⭐
-AI compare
-Stem comparison
-Loudness analysis
-Automatic mix notes
-Audio fingerprint
+
+# 🎤 Lyrics
+
+## ⭐ Core
+
+- Lyrics Editor
+- Auto Save
+- Verse Structure
+
+## ⭐⭐ Important
+
+- Chords
+- Rhymes
+- Highlight Sections
+- Comments
+
+## ⭐⭐⭐ Future
+
+- AI Lyrics
+- AI Rhymes
+- AI Translation
+- AI Meaning Analysis
+
+---
+
+# 📎 Attachments
+
+## ⭐ Core
+
+- Upload File
+- Download File
+- Delete File
+- Preview
+
+Supported:
+
+- MIDI
+- PDF
+- DOCX
+- Images
+- DAW Project
+- ZIP
+
+## ⭐⭐ Important
+
+- Categorization
+- Search
+- Filter
+- Thumbnail
+
+## ⭐⭐⭐ Future
+
+- AI Categorization
+
 ---
 
 # 💬 Comments
-## Core ⭐
-Comment
-Reply
-Edit
-Delete
-Mention users
-Timestamp comment
----
-## Important ⭐⭐
-Resolve comment
-Emoji reactions
-Attach files
-Voice comments
----
-## Future ⭐⭐⭐
-AI summarize discussion
-AI detect unresolved issues
+
+## ⭐ Core
+
+- Add Comment
+- Reply
+- Edit
+- Delete
+- Mention User
+- Timestamp Comment
+
+## ⭐⭐ Important
+
+- Resolve Comment
+- Reactions
+- Attach File
+- Voice Comment
+
+## ⭐⭐⭐ Future
+
+- AI Summary
+- AI Detect Unresolved Issues
+
 ---
 
 # 👥 Collaboration
-## Core ⭐
-Invite member
-Remove member
-Role permissions
----
-## Important ⭐⭐
-Notifications
-Activity feed
-Presence
-Recent activity
----
-## Future ⭐⭐⭐
-Live collaboration
-Shared playback
-Live cursor
-Collaborative notes
+
+## ⭐ Core
+
+- Invite Collaborator
+- Remove Collaborator
+- Role Permissions
+- Share Session
+
+## ⭐⭐ Important
+
+- Activity Feed
+- Presence
+- Notifications
+- Shared Notes
+
+## ⭐⭐⭐ Future
+
+- Live Collaboration
+- Live Listening
+- Live Cursor
+- Collaborative Editing
+
 ---
 
 # 📅 Timeline
 
-One of our differentiators.
+One of the biggest product differentiators.
+
+## ⭐ Core
+
+Automatically records:
+
+- Session Created
+- Snapshot Created
+- Notes Updated
+- Lyrics Updated
+- Comment Added
+- Collaborator Joined
+- Status Changed
+
+## ⭐⭐ Important
+
+- Filters
+- Search
+- Milestones
+- Timeline Export
+
+## ⭐⭐⭐ Future
+
+- AI Timeline Summary
+- Creative Replay
+
 ---
-## Core ⭐
-Song created
-Version uploaded
-Comment added
-Member invited
-Status changed
+
+# 📁 Music Project
+
+Optional.
+
+Used to organize Sessions.
+
+Examples:
+
+- Album
+- EP
+- Client Work
+- Beat Pack
+
+## ⭐ Core
+
+- Create Project
+- Rename Project
+- Delete Project
+- Project Type
+- Description
+- Add Session
+- Remove Session
+
+## ⭐⭐ Important
+
+- Cover Art
+- Members
+- Progress
+- Target Date
+- Milestones
+- Notes
+
+## ⭐⭐⭐ Future
+
+- Budget
+- Publishing Checklist
+- Distribution
+- Analytics
+
 ---
-## Important ⭐⭐
-Milestones
-Filters
-Search
-Export
----
-## Future ⭐⭐⭐
-AI timeline summary
-Timeline playback
-Release history
----
-# 📂 Attachments
-## Core ⭐
-Upload
-Download
-Preview
----
-## Important ⭐⭐
-Lyrics
-Artwork
-MIDI
-Session files
-PDFs
----
-## Future ⭐⭐⭐
-DAW project preview
-3D artwork
-Smart categorization
----
+
 # 🔍 Search
-## Core ⭐
-Search songs
-Search projects
+
+## ⭐ Core
+
+- Search Sessions
+- Search Projects
+
+## ⭐⭐ Important
+
+- Search Notes
+- Search Lyrics
+- Search Comments
+- Search Attachments
+
+## ⭐⭐⭐ Future
+
+- AI Semantic Search
+
 ---
-## Important ⭐⭐
-Search comments
-Search collaborators
----
-## Future ⭐⭐⭐
-AI semantic search
----
+
 # 🔔 Notifications
-## Core ⭐
-New comment
-New version
-Invitation
+
+## ⭐ Core
+
+- New Comment
+- Invitation
+- Mention
+
+## ⭐⭐ Important
+
+- Daily Digest
+- Email Notifications
+
+## ⭐⭐⭐ Future
+
+- Mobile Push
+- Discord
+- Slack
+
 ---
-## Important ⭐⭐
-Daily digest
-Email notifications
----
-## Future ⭐⭐⭐
-Mobile push
-Slack integration
-Discord integration
----
+
 # 📊 Dashboard
-## Core ⭐
-Recent songs
-Recent projects
-Activity
+
+## ⭐ Core
+
+- Recent Sessions
+- Recent Projects
+- Continue Working
+- Recent Activity
+
+## ⭐⭐ Important
+
+- Pinned Sessions
+- Recently Opened
+- Upcoming Goals
+
+## ⭐⭐⭐ Future
+
+- Productivity Analytics
+- Session Insights
+- Weekly Report
+
 ---
-## Important ⭐⭐
-Upcoming deadlines
-Assigned tasks
+
+# ⚙️ Settings
+
+## ⭐ Core
+
+- Profile
+- Password
+- Theme
+- Language
+
+## ⭐⭐ Important
+
+- Keyboard Shortcuts
+- Audio Preferences
+- Notification Settings
+
+## ⭐⭐⭐ Future
+
+- Integrations
+- API Tokens
+
 ---
-## Future ⭐⭐⭐
-Productivity insights
-Collaboration analytics
+
+# 🤖 AI Features (Future)
+
+- AI Session Summary
+- AI Snapshot Comparison
+- AI Lyrics
+- AI Brainstorm
+- AI Mix Suggestions
+- AI Timeline Summary
+- AI Mood Detection
+- AI Genre Detection
+- AI Search
+- AI Organization
+
 ---
+
+# 🌟 Magic Features
+
+These features define the product.
+
+## Creative Timeline
+
+The complete story of a Session.
+
+---
+
+## Resume Session
+
+Immediately shows:
+
+- Last worked
+- Latest Snapshot
+- Outstanding comments
+- Pending tasks
+
+---
+
+## Time-based Comments
+
+Feedback attached to exact timestamps.
+
+---
+
+## Session Health
+
+Shows whether a Session is:
+
+- Active
+- Dormant
+- Abandoned
+
+---
+
+## Creative Journey
+
+Visual representation of progress.
+
+Idea
+
+↓
+
+Writing
+
+↓
+
+Recording
+
+↓
+
+Production
+
+↓
+
+Mixing
+
+↓
+
+Mastering
+
+↓
+
+Completed
+
+---
+
+## One Source of Truth
+
+Every creative asset belongs to a Session.
+
+No duplicated history.
+
+No overwritten work.
