@@ -12,6 +12,14 @@ Independent musicians shouldn't have to manage projects through scattered folder
 
 Our goal is to become the workspace musicians open every time they create together.
 
+## Product Philosophy
+
+The platform should be invaluable for musicians working alone.
+
+Collaboration is an extension of the workflow—not the starting point.
+
+Users should never feel forced into team-oriented features to accomplish individual creative work.
+
 ## Core Beliefs
 
 - Songs are the center of every project.
@@ -24,6 +32,8 @@ Our goal is to become the workspace musicians open every time they create togeth
 ## Long-Term Vision
 
 Become the default collaboration platform for independent musicians worldwide.
+
+
 
 ## Decisions
 
