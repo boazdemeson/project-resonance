@@ -2,24 +2,23 @@
 
 ## Purpose
 
-This document describes the end-to-end experience of an independent musician using the platform.
+This document describes the complete lifecycle of a musician using the platform.
 
-The focus is on **user goals**, **emotions**, and **system behavior**, not UI implementation.
+The journey focuses on user goals, emotions, and expected system behavior.
+
+The platform is designed to support musicians from the first creative idea until a Session is completed.
 
 ---
 
 # Persona
 
-**Name:** Judas
+Independent musician.
 
-**Role:** Independent Musician
+Usually works alone.
 
-**Working Style:**
+Occasionally collaborates.
 
-- Usually works alone
-- Occasionally collaborates with others
-- Creates songs continuously
-- Releases singles and EPs
+Creates music continuously.
 
 ---
 
@@ -27,70 +26,70 @@ The focus is on **user goals**, **emotions**, and **system behavior**, not UI im
 
 ## Phase 1 — Inspiration
 
-### User Goal
+### Goal
 
-Capture a new song idea before it is forgotten.
+Capture an idea immediately.
 
 ### User Actions
 
-- Open the application
-- Create a new Song
+- Open platform
+- Create Session
 
-### System Response
+### System
 
-- Creates a Song
-- Opens the Song workspace
+- Creates Session
+- Opens Session dashboard
 
-### User Emotion
+### Emotion
 
 😊 Inspired
 
 ---
 
-## Phase 2 — First Demo
+## Phase 2 — Capture
 
-### User Goal
+### Goal
 
-Save the first version of the song safely.
+Save today's creative work.
 
 ### User Actions
 
-- Upload audio file
-- Add optional notes
+- Upload Snapshot
+- Write Notes
+- Write Lyrics
+- Attach Files
 
-### System Response
+### System
 
-- Creates Version 1
-- Records upload date
-- Adds activity to Timeline
+- Creates Snapshot
+- Updates Timeline
+- Saves automatically
 
-### User Emotion
+### Emotion
 
-🙂 Confident
+🙂 Safe
 
 ---
 
-## Phase 3 — Continue Creating
+## Phase 3 — Continue
 
-### User Goal
+### Goal
 
-Continue improving the song without losing previous work.
+Continue improving the Session.
 
 ### User Actions
 
-- Upload new Version
-- Add version notes
-- Attach lyrics
-- Attach MIDI
-- Attach artwork
+- Upload new Snapshots
+- Update Lyrics
+- Add Notes
+- Organize Attachments
 
-### System Response
+### System
 
-- Creates a new Version
-- Preserves all previous Versions
+- Preserves history
 - Updates Timeline
 
-### User Emotion
+### Emotion
 
 😊 Creative
 
@@ -98,29 +97,23 @@ Continue improving the song without losing previous work.
 
 ## Phase 4 — Organize
 
-### User Goal
+### Goal
 
-Keep songs organized as the music library grows.
+Keep Sessions easy to find.
 
 ### User Actions
 
-Option A
+- Search Sessions
+- Favorite Session
+- Archive Session
+- Optionally create a Music Project
+- Add Session to Music Project
 
-- Create a new Music Project
-- Add Songs
+### System
 
-Option B
+- Organizes without changing Session history
 
-- Create Songs first
-- Add them to a Music Project later
-
-### System Response
-
-- Songs remain independent
-- Music Projects reference Songs
-- No duplicate Songs are created
-
-### User Emotion
+### Emotion
 
 😌 Organized
 
@@ -128,21 +121,21 @@ Option B
 
 ## Phase 5 — Collaborate (Optional)
 
-### User Goal
+### Goal
 
-Receive feedback from collaborators.
+Receive feedback.
 
 ### User Actions
 
 - Invite collaborator
-- Share Song
+- Share Session
 
-### System Response
+### System
 
-- Grants collaborator access
-- Records invitation in Timeline
+- Grants access
+- Records activity
 
-### User Emotion
+### Emotion
 
 🙂 Hopeful
 
@@ -150,81 +143,78 @@ Receive feedback from collaborators.
 
 ## Phase 6 — Review
 
-### User Goal
+### Goal
 
-Collect feedback without losing context.
+Improve the Session using feedback.
 
 ### User Actions
 
 - Read comments
 - Reply
 - Resolve comments
-- Add timestamp comments
+- Upload new Snapshot
 
-### System Response
+### System
 
-- Stores comments with the appropriate Song or Version
-- Updates Timeline
+- Keeps comments attached to the correct Session
+- Preserves discussion history
 
-### User Emotion
+### Emotion
 
 🤔 Focused
 
 ---
 
-## Phase 7 — Finalize
+## Phase 7 — Complete
 
-### User Goal
+### Goal
 
-Prepare the song for release.
+Finish the Session.
 
 ### User Actions
 
-- Upload final Version
-- Mark Song as Released
+- Mark Session as Completed
 
-### System Response
+### System
 
-- Updates Song Status
-- Records Release Milestone
-- Preserves complete Song history
+- Updates Session Status
+- Records milestone
 
-### User Emotion
+### Emotion
 
-🎉 Proud
+🎉 Accomplished
 
 ---
 
-# Journey Principles
+## Success Criteria
 
-The product should help musicians:
+A successful journey means users can:
 
-- Capture ideas quickly
-- Never lose work
-- Stay organized
-- Understand the evolution of every Song
-- Collaborate naturally when needed
-- Spend more time making music than managing files
-
----
-
-# Success Criteria
-
-A successful user journey means the musician can:
-
-- Create a Song in under one minute
-- Upload a new Version in under thirty seconds
-- Find any previous Version instantly
-- Resume work after weeks away without confusion
-- Invite collaborators without changing their workflow
+- Capture ideas in under one minute.
+- Never lose previous work.
+- Resume any Session immediately.
+- Stay organized without thinking about folders.
+- Collaborate only when needed.
 
 ---
 
 ## Decisions
 
-- Songs can exist independently.
+- Session is the primary entity.
 - Music Projects are optional.
 - Collaboration is optional.
-- Every Version is preserved.
-- The Timeline tells the story of a Song.
-- The product is designed for solo creators first and collaboration second.
+- History is never lost.
+
+---
+
+## Open Questions
+
+- Should Session completion trigger any celebration or archive flow?
+
+---
+
+## Related Documents
+
+- 00-VISION.md
+- 04-DOMAIN-MODEL.md
+- PRODUCT-PILLARS.md
