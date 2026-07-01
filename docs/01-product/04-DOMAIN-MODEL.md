@@ -1,92 +1,127 @@
 # Domain Model
 
-This document defines the core concepts used throughout the product.
+## Purpose
 
-Every feature, screen, API, and database model should be built around these concepts.
+This document defines the core concepts of the product.
+
+These concepts describe the language of the platform and should remain consistent across product discussions, UI, APIs, and database design.
+
+This is **not** a database schema. It is a business domain model.
+
+---
+
+# Domain Hierarchy
+
+Workspace
+└── Collection
+    └── Song
+        ├── Version
+        ├── Collaborator
+        ├── Comment
+        ├── Attachment
+        ├── Milestone
+        └── Activity
 
 ---
 
 # Workspace
 
-A Workspace is the highest level container.
+A Workspace represents the personal home of a musician or team.
 
-It belongs to one owner.
+Every user owns or belongs to one or more Workspaces.
 
-A Workspace contains Collections.
+A Workspace contains multiple Collections.
 
-Examples:
+### Examples
 
-- Alex's Workspace
+- Judas
 - Midnight Studio
-- My Music
+- My Band
 
 ---
 
 # Collection
 
-A Collection groups related songs.
+A Collection groups related Songs.
 
-A Collection can represent:
+Collections provide organization without forcing a specific workflow.
+
+A Collection may represent:
 
 - Album
 - EP
 - Singles
-- Beat Pack
 - Demo Ideas
+- Beat Pack
 - Client Project
+- Soundtrack
 
-A Collection contains Songs.
+A Collection contains multiple Songs.
 
 ---
 
 # Song
 
-The Song is the most important entity in the platform.
+The Song is the central entity of the platform.
 
-Everything revolves around the Song.
+Everything revolves around a Song.
 
 A Song contains:
 
-- Revisions
+- Versions
 - Collaborators
 - Comments
-- Activity
 - Attachments
+- Timeline
+- Milestones
 
-A Song progresses through different stages during its lifecycle.
+Every Song progresses through a creative lifecycle.
 
 ---
 
-# Revision
+# Version
 
-A Revision represents one uploaded version of a Song.
+A Version represents the state of a Song at a specific point in time.
 
-Every Revision is immutable.
+Uploading a new audio file creates a new Version.
 
-Uploading a new audio file creates a new Revision.
+Versions are immutable.
 
-Previous Revisions are never overwritten.
+Older Versions are never overwritten.
 
-A Revision may contain:
+Each Version may include:
 
 - Audio file
+- Title
 - Description
 - Uploaded by
 - Upload date
+
+Examples:
+
+Version 1
+Label: Demo
+
+Version 5
+Label: Mix 2
+
+Version 12
+Label: Final Master
 
 ---
 
 # Collaborator
 
-A Collaborator is anyone invited to contribute to a Song.
+A Collaborator is someone participating in the creation of a Song.
 
-Examples:
+Examples include:
 
 - Artist
 - Producer
 - Mixing Engineer
 - Mastering Engineer
 - Guitarist
+- Songwriter
 
 Collaborators may have different permissions.
 
@@ -94,31 +129,69 @@ Collaborators may have different permissions.
 
 # Comment
 
-A Comment represents feedback attached to a Song or Revision.
+A Comment represents feedback.
 
-Comments may optionally reference a timestamp.
+Comments may belong to:
+
+- Song
+- Version
+
+Comments may optionally reference an audio timestamp.
 
 Example:
 
 01:42
 
-"Can we reduce the vocal reverb here?"
+"The vocal sounds slightly buried here."
+
+---
+
+# Attachment
+
+Attachments are supporting files related to a Song.
+
+Examples:
+
+- Lyrics
+- Chord Sheets
+- MIDI
+- Cover Art
+- Session Notes
+- Project Files
+
+Attachments are not Versions.
+
+---
+
+# Milestone
+
+A Milestone marks an important achievement during a Song's lifecycle.
+
+Examples:
+
+- First Demo
+- Recording Complete
+- Mixing Complete
+- Approved
+- Released
+
+Milestones help tell the story of the Song.
 
 ---
 
 # Activity
 
-Activity represents everything that happens during the life of a Song.
+Activity represents every meaningful event.
 
 Examples:
 
 - Song created
-- Revision uploaded
+- Version uploaded
 - Comment added
 - Collaborator invited
-- Song released
+- Milestone reached
 
-Activity forms the Song Timeline.
+Activities form the Song Timeline.
 
 ---
 
@@ -126,68 +199,32 @@ Activity forms the Song Timeline.
 
 The Timeline is the chronological history of a Song.
 
-It tells the story of the creative process.
+Unlike traditional version history, the Timeline captures both creative progress and collaboration.
 
-Unlike traditional version history, the Timeline includes creative events, discussions, and milestones.
-
----
-
-# Attachment
-
-Attachments include files that support the Song.
-
-Examples:
-
-- Lyrics
-- Cover Art
-- Chord Sheets
-- MIDI
-- Session Notes
-
-Attachments are not Revisions.
-
-They exist alongside the Song.
+The Timeline tells the complete story of how a Song evolved.
 
 ---
 
-# Status
+# Song Status
 
 A Song always has one current Status.
 
-Example statuses:
+Possible statuses include:
 
-Idea
-
-Recording
-
-Production
-
-Mixing
-
-Mastering
-
-Review
-
-Released
-
-Archived
+- Idea
+- Writing
+- Recording
+- Production
+- Mixing
+- Mastering
+- Review
+- Released
+- Archived
 
 ---
 
-# Relationships
+# Guiding Principle
 
-Workspace
+Users should think in terms of Songs—not folders or files.
 
-└── Collection
-
-└── Song
-
-├── Revision
-
-├── Comment
-
-├── Activity
-
-├── Collaborator
-
-└── Attachment
+The platform organizes creative work, not storage.
