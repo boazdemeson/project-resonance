@@ -1,0 +1,26 @@
+# ADR-0005: ore Session Data Model
+
+**Status:** Accepted
+
+**Date:** 2026-07-02
+
+---
+
+## Decision
+
+- A Session owns exactly one Notes document.
+- A Session owns exactly one Lyrics document.
+- A Snapshot captures the entire Session state.
+- Timeline Events are stored permanently.
+
+---
+
+
+## Rationale
+
+- Simpler mental model for musicians.
+- Easier backend implementation.
+- Preserves complete creative history.
+- Enables future features like version comparison, restoration, and activity analytics.
+
+---
