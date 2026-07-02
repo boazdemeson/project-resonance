@@ -1,1 +1,19 @@
-﻿{ "name": "resonance-mvp", "private": true, "workspaces": ["apps/","packages/"], "devDependencies": { "turbo": "latest", "pnpm": "latest", "typescript": "latest" } }
+{
+  "name": "resonance-mvp",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter api run dev\" \"pnpm --filter web run dev\"",
+    "dev:api": "pnpm --filter api run dev",
+    "dev:web": "pnpm --filter web run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "pnpm": "latest",
+    "turbo": "latest",
+    "typescript": "latest"
+  }
+}
