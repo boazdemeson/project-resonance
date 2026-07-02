@@ -1,0 +1,1 @@
+﻿{ "name": "resonance-mvp", "private": true, "workspaces": ["apps/","packages/"], "devDependencies": { "turbo": "latest", "pnpm": "latest", "typescript": "latest" } }
