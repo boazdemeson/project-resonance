@@ -1,58 +1,151 @@
-# Project Resonance
+# 🎵 Resonance
 
-A collaborative workspace built for independent musicians.
+> **Preserve every idea. Build every song.**
 
-Resonance helps artists capture ideas, preserve creative history, collaborate with others, and organize songs from first inspiration to final release.
+A collaborative creative workspace for independent musicians.
 
----
-
-## Vision
-
-Music creation is rarely linear.
-
-Ideas evolve, versions multiply, feedback accumulates, and projects become difficult to manage.
-
-Resonance provides a dedicated creative workspace where musicians can write, record, organize, collaborate, and safely preserve every stage of their creative process.
+Resonance helps artists capture ideas, preserve creative history, collaborate seamlessly, and organize music from first inspiration to final release.
 
 ---
 
-## Current Status
+![Status](https://img.shields.io/badge/status-in_development-orange)
+![Sprint](https://img.shields.io/badge/sprint-4-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Architecture](https://img.shields.io/badge/architecture-Modular%20Monolith-purple)
+![Frontend](https://img.shields.io/badge/frontend-Next.js-black)
+![Backend](https://img.shields.io/badge/backend-NestJS-red)
+![Database](https://img.shields.io/badge/database-PostgreSQL-blue)
 
-### ✅ Sprint 1 — Product Discovery
+---
 
-Completed
+## ✨ Why Resonance?
 
-- Product Vision
+Making music is messy.
+
+Ideas become demos.
+
+Demos become revisions.
+
+Revisions become dozens of exported files, scattered notes, forgotten lyrics, and endless feedback.
+
+Resonance keeps the entire creative process together in one place.
+
+Instead of managing folders, chats, cloud drives, and notes separately, musicians work inside a dedicated creative workspace built around how songs actually evolve.
+
+---
+
+# 🚀 Vision
+
+Create the best creative workspace for independent musicians.
+
+Resonance is designed to help artists:
+
+- 🎼 Capture ideas instantly
+- 🎤 Write lyrics
+- 📝 Keep production notes
+- 📸 Preserve every creative version with Snapshots
+- 🤝 Collaborate with band members and producers
+- 💬 Discuss ideas through contextual comments
+- 🎵 Organize Sessions into Singles, EPs, and Albums
+- 🔒 Protect years of creative work
+
+---
+
+# 🏗 Architecture Overview
+
+```
+Artist
+   │
+   ▼
+Session
+   │
+   ├── Notes
+   ├── Lyrics
+   ├── Snapshots
+   ├── Attachments
+   ├── Comments
+   └── Collaborators
+           │
+           ▼
+    Music Project
+           │
+           ▼
+      Single / EP / Album
+```
+
+---
+
+# 📁 Repository Structure
+
+```
+docs/
+│
+├── 00-foundation/
+├── 01-product/
+├── 02-design/
+├── 03-engineering/
+├── 04-research/
+│
+├── adr/
+│
+├── apps/
+│
+├── packages/
+│
+└── scripts/
+```
+
+Documentation is the **single source of truth** for product, design, and engineering decisions.
+
+---
+
+# 📚 Documentation
+
+## ✅ Foundation
+
+- Manifesto
+- Principles
+- Decisions
+
+---
+
+## ✅ Product
+
+- Vision
 - Problem Definition
 - Personas
 - Domain Model
 - Feature Inventory
-- MVP Scope
+- Value Proposition
+- MVP
 - Roadmap
+- User Journey
+- Jobs To Be Done
+- Competitive Analysis
+- Business Model
+- Technical Feasibility
+- Market Validation
 
 ---
 
-### ✅ Sprint 2 — Product & UX Design
+## ✅ Design
 
-Completed
-
+- Design Principles
 - Information Architecture
 - User Flows
 - Platform Flows
 - Wireframes
+- Design System
 - Navigation
+- Permission Model
 - Database Design
 - API Design
-- Permission Model
-- Design Principles
 
 ---
 
-### ✅ Sprint 3 — Engineering Architecture
+## ✅ Engineering
 
-Completed
-
-- System Architecture
+- Architecture
 - Technology Stack
 - Folder Structure
 - Database Schema
@@ -68,66 +161,145 @@ Completed
 
 ---
 
-### 🚧 Sprint 4 — Implementation
+# 📌 Current Status
 
-In Progress
+## ✅ Sprint 1 — Product Discovery
 
-Upcoming milestones include:
-
-- Project Setup
-- Authentication
-- Sessions
-- Notes & Lyrics
-- Snapshots
-- Attachments
-- Music Projects
-- Collaboration
-- Notifications
-- Beta Release
+Completed
 
 ---
 
-## Documentation
+## ✅ Sprint 2 — Product & UX Design
+
+Completed
+
+---
+
+## ✅ Sprint 3 — Engineering Architecture
+
+Completed
+
+---
+
+## 🚧 Sprint 4 — Implementation
+
+Current Phase
+
+- [ ] Project Setup
+- [ ] Authentication
+- [ ] Application Shell
+- [ ] Sessions
+- [ ] Notes
+- [ ] Lyrics
+- [ ] Storage
+- [ ] Snapshots
+- [ ] Music Projects
+- [ ] Collaboration
+- [ ] Notifications
+- [ ] Polish
+- [ ] Beta Release
+
+---
+
+# 🛠 Technology Stack
+
+| Layer | Technology |
+|---------|------------|
+| Frontend | Next.js |
+| Backend | NestJS |
+| Language | TypeScript |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| Authentication | Better Auth |
+| Storage | Object Storage |
+| Styling | Tailwind CSS |
+| UI | shadcn/ui |
+| Monorepo | Turborepo |
+
+---
+
+# 🧠 Development Philosophy
+
+Resonance follows a documentation-first approach.
+
+Every feature moves through the same lifecycle:
 
 ```
-docs/
+Product
 
-00-foundation/
-01-product/
-02-design/
-03-engineering/
-04-research/
+↓
+
+Design
+
+↓
+
+Engineering
+
+↓
+
+Implementation
+
+↓
+
+Testing
+
+↓
+
+Review
+
+↓
+
+Release
 ```
 
-The documentation serves as the single source of truth for product, design, and engineering decisions.
+Architecture is designed before code.
+
+Documentation evolves alongside implementation.
 
 ---
 
-## Architecture
+# 🤖 AI-Assisted Development
 
-Resonance follows a:
+Resonance is intentionally developed with AI as an engineering assistant.
 
-- Modular Monolith Architecture
-- Feature-Driven Frontend
-- Domain-Driven Backend
-- REST API
-- PostgreSQL Database
-- Object Storage
-- Desktop-First Experience
+AI is used to:
 
----
+- Generate implementation
+- Generate tests
+- Improve documentation
+- Refactor code
+- Explain architecture
 
-## Development Principles
+Human engineers remain responsible for:
 
-- Documentation First
-- Product-Led Development
-- AI-Assisted Engineering
-- Test-Driven Quality
-- Clean Architecture
-- Feature-Oriented Design
+- Product decisions
+- Architecture
+- Security
+- Code review
+- Production releases
 
 ---
 
-## License
+# 📈 Roadmap
 
-MIT License
+- ✅ Product Discovery
+- ✅ UX & System Design
+- ✅ Engineering Architecture
+- 🚧 MVP Development
+- ⏳ Private Beta
+- ⏳ Public Beta
+- ⏳ Version 1.0
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome after the MVP reaches a stable state.
+
+Please read the documentation before proposing architectural or product changes.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
