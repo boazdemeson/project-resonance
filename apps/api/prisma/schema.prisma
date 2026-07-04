@@ -8,36 +8,39 @@ datasource db {
 }
 
 model User {
-  id         String     @id @default(cuid())
-  email      String     @unique
-  password   String?    
-  name       String?
-  createdAt  DateTime   @default(now())
-  updatedAt  DateTime   @updatedAt
-  deletedAt  DateTime?  
-  sessions   Session[]  @relation("UserSessions")
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String?
+  name      String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now()) @updatedAt
+  deletedAt DateTime?
+
+  sessions Session[] @relation("UserSessions")
 }
 
 model Session {
-  id           String      @id @default(cuid())
-  title        String
-  description  String?
-  ownerId      String
-  owner        User        @relation(fields: [ownerId], references: [id], name: "UserSessions")
-  isArchived   Boolean     @default(false)
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-  deletedAt    DateTime?   
-  snapshots    Snapshot[]
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  ownerId     String
+  isArchived  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+  deletedAt   DateTime?
+
+  owner     User       @relation("UserSessions", fields: [ownerId], references: [id])
+  snapshots Snapshot[]
 }
 
 model Snapshot {
-  id         String    @id @default(cuid())
-  sessionId  String
-  session    Session   @relation(fields: [sessionId], references: [id])
-  createdBy  String
-  createdAt  DateTime  @default(now())
-  data       Json
-  note       String?
-  immutable  Boolean   @default(true) 
+  id        String   @id @default(cuid())
+  sessionId String
+  createdBy String
+  createdAt DateTime @default(now())
+  data      Json
+  note      String?
+  immutable Boolean  @default(true)
+
+  session Session @relation(fields: [sessionId], references: [id])
 }

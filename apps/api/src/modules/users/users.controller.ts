@@ -1,7 +1,7 @@
-import { Controller, Get, Post, Body, Delete, Param } from '@nestjs/common';
-import { ZodError } from 'zod';
+import { Controller, Get, Post, Body, Delete, Param, UsePipes } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { createUserSchema } from './schemas/create-user.schema';
+import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
 
 @Controller('users')
 export class UsersController {
@@ -9,32 +9,18 @@ export class UsersController {
 
   @Get()
   async findAll() {
-    const users = await this.usersService.findAll();
-    return { success: true, data: users };
+    return this.usersService.findAll();
   }
 
   @Post()
+  @UsePipes(new ZodValidationPipe(createUserSchema))
   async create(@Body() body: any) {
-    try {
-      const payload = createUserSchema.parse(body);
-      const user = await this.usersService.create(payload);
-      return { success: true, data: user };
-    } catch (err) {
-      if (err instanceof ZodError) {
-        const msg = err.errors.map((e) => e.message).join('; ');
-        return { success: false, error: { code: 'validation_error', message: msg } };
-      }
-      return { success: false, error: { message: err instanceof Error ? err.message : 'Unexpected error' } };
-    }
+    return this.usersService.create(body);
   }
 
   @Delete(':id')
   async remove(@Param('id') id: string) {
-    try {
-      await this.usersService.remove(id);
-      return { success: true, data: null };
-    } catch (err) {
-      return { success: false, error: { message: err instanceof Error ? err.message : 'Unexpected error' } };
-    }
+    await this.usersService.remove(id);
+    return null;
   }
 }
