@@ -1,4 +1,14 @@
-import { Controller, Get, Post, Body, Delete, Patch, Param, Query, UsePipes } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Put,
+  Query,
+} from '@nestjs/common';
 import { SessionsService } from './sessions.service';
 import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
 import { createSessionSchema } from './schemas/create-session.schema';
@@ -14,8 +24,9 @@ export class SessionsController {
   }
 
   @Post()
-  @UsePipes(new ZodValidationPipe(createSessionSchema))
-  async create(@Body() body: any) {
+  async create(
+    @Body(new ZodValidationPipe(createSessionSchema)) body: any,
+  ) {
     return this.sessionsService.create(body);
   }
 
@@ -24,12 +35,20 @@ export class SessionsController {
     await this.sessionsService.remove(id);
     return null;
   }
-  
-  @Patch(':id')
 
-  @UsePipes(new ZodValidationPipe(updateSessionSchema))
-    async update(@Param('id') id: string, @Body() body: any) {
+  @Patch(':id')
+  async patchUpdate(
+    @Param('id') id: string,
+    @Body(new ZodValidationPipe(updateSessionSchema)) body: any,
+  ) {
     return this.sessionsService.update(id, body);
   }
 
+  @Put(':id')
+  async putUpdate(
+    @Param('id') id: string,
+    @Body(new ZodValidationPipe(updateSessionSchema)) body: any,
+  ) {
+    return this.sessionsService.update(id, body);
+  }
 }

@@ -51,10 +51,11 @@ export async function apiDelete(path: string): Promise<void> {
 
 export async function apiPatch<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
-    method: 'PUT', // or PATCH if you prefer: use PATCH to match backend handler
+    method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
+
   const json = (await res.json()) as ApiSuccessShape<T> | ApiErrorShape;
   if (!res.ok || (json as any).success === false) {
     const msg = (json as any).success === false ? (json as ApiErrorShape).error.message : 'API request failed';

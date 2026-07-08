@@ -1,29 +1,33 @@
-import { apiPost, apiGet, apiDelete, apiPatch } from './apiClient';
+import { apiGet, apiPost, apiPatch, apiDelete } from "./apiClient";
 
 export type Session = {
   id: string;
   title: string;
   description: string | null;
   ownerId: string;
-  isArchived: boolean;
   createdAt: string;
   updatedAt: string;
-  deletedAt: string | null;
 };
 
 export async function listSessions(ownerId: string) {
-  const qs = new URLSearchParams({ ownerId });
-  return apiGet<Session[]>(`/sessions?${qs.toString()}`);
+  return apiGet<Session[]>(`/sessions?ownerId=${encodeURIComponent(ownerId)}`);
 }
 
-export async function createSession(payload: {
+export async function createSession(input: {
+  ownerId: string;
   title: string;
   description?: string;
-  ownerId: string;
 }) {
-  return apiPost<Session>('/sessions', payload);
+  return apiPost<Session>("/sessions", input);
 }
 
-export async function updateSession(id: string, payload: { title: string; description?: string }) {
-  return apiPatch<Session>(`/sessions/${id}`, payload);
+export async function updateSession(
+  id: string,
+  input: { title?: string; description?: string }
+) {
+  return apiPatch<Session>(`/sessions/${id}`, input);
+}
+
+export async function deleteSession(id: string) {
+  return apiDelete(`/sessions/${id}`);
 }
