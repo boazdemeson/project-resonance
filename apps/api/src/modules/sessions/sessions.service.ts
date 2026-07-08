@@ -16,4 +16,8 @@ export class SessionsService {
   async remove(id: string) {
     return this.repo.softDelete(id);
   }
+
+  async update(id: string, data: { title: string; description?: string | null }) {
+    return this.repo.update(id, data);
+  }
 }

@@ -1,4 +1,4 @@
-import { apiGet, apiPost } from "./apiClient";
+import { apiPost, apiGet, apiDelete, apiPatch } from './apiClient';
 
 export type Session = {
   id: string;
@@ -21,5 +21,9 @@ export async function createSession(payload: {
   description?: string;
   ownerId: string;
 }) {
-  return apiPost<Session>("/sessions", payload);
+  return apiPost<Session>('/sessions', payload);
+}
+
+export async function updateSession(id: string, payload: { title: string; description?: string }) {
+  return apiPatch<Session>(`/sessions/${id}`, payload);
 }

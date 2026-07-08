@@ -18,4 +18,11 @@ export class SessionsRepository {
       data: { deletedAt: new Date() },
     });
   }
+
+  async update(id: string, data: { title: string; description?: string | null }) {
+    return prisma.session.update({
+      where: { id },
+      data,
+    });
+  }
 }
